@@ -6,6 +6,7 @@
         <link href="mystyles.css" rel="stylesheet"/>
     </head>
     <body>
+        <!--nav bar-->
         <div class="topnav">
             <a class="active" href="Home.html">Home</a>
             <a class="active" href="current.html">Current Projects</a>
@@ -13,42 +14,232 @@
             <a class="active" href="CLAbout.html">About</a>
             <a class="active" href="ContactMe.html">Contact</a>
         </div>
+        <!--header-->
         <div class="header">
             <img src="Ross.JPG" alt="sunrise over a rockpool" style="width:100%;">
             <div class="title">Past Projects</div>
             <div class="copyright"> © 2021 Clare Lynch </div>
-        </div> 
-        <h3 class="centered-text">Video Editing</h3>
-        <p class="about-me">During the pandemic I began making educational videos as part of my music teaching business.
-        I started out making basic videos on iMovie but soon became curious to learn how more engaging animated videos were made. 
-        I used Da Vinci Resolve to make the following lessons and performances.    
-        </p>
-        <video class="video" autoplay controls id="vid" src="BeatLesson.mp4" style="width:60%; padding-left:20%;">
-            
-            Your browser does not support the video tag.
-            </video>
-            <br>
-        <div class="buttons">
-            <button class="button" onClick="GoBack()">Back</button>
-            <button class="button" onClick="changeVideo()">Next</button>
-            <script src="GoForward1.js"></script>
-            <script src="GoBack1.js"></script>
         </div>
-        <div>
+
+            <!--Rock Snake-->
+        <h3 class="centered-text">Python Object Oriented Programming Project - Rock Snake!</h3>
+        <h5 class="centered-text">September 2022</h5>
+        <p class="about-me">As part of my final assessment for Python, 
+            I coded the snake game using Object Oriented Programming (OOP). 
+            This involved planning the game and working out the algorithm in detail before
+            finally implementing the code. Drawio was used to create the diagrams for the 
+            initial planning stage. </p>
+        <video class="video" autoplay controls src="snake.mp4"></video>
+        <div class="buttons">
+        <input type="button" value="Click here to read more!" class="red-button" onClick="document.getElementById('python').style.display='block';">
+    </div>
+            <div id="python" class="modal">
+            <h3 class="centered-text">Using Object Oriented Programming </h3>    
+    
+                <p class="about-me">In OOP, classes of objects are identified, 
+                given properties (attributes) and methods (functions). These are then called 
+                during the main game loop. My classes included Snake, Food, Sounds and Messages.</p>
+
+                 
+                <h5 class="centered-text">The 'secret' to the continuously moving snake!</h5>
+                 
+                <p class="about-me">The x and y variables are first used to draw the 'snake' to the screen. 
+                    x_change moves the snake 20px in the direction specified by the user. Pygame KEYDOWN is used
+                    to detect keyboard input. x += x_change means that the value of x (coordinates of the current position)
+                    is added to or subtracted from the value of x_change (+ or - 20px) each time the main loop runs (5 times per second). The same is specified for the y axis, allowing the snake 
+                    to move continously. </p>
+
+                <img src="snake-move.png" alt="python code showing how the snake moves" class="centered-pic">
+                 
+                <h5 class="centered-text">Extra work</h5>
+
+                <p class="about-me">Once I had solved some initial problems getting the snake to move using OOP, 
+                    I had a lot of fun and decided to add a few extra features to make it look cool! &#128526 
+                
+                <h5 class="centered-text">Color Change</h5>
+
+                <p class="about-me">The current snake length is divided in two to find the halfway point.
+                    When this point reaches 50px from the border, the snake should turn red to show he is 
+                    in danger!</p>
+                
+                <h5 class="centered-text">Snake Speed</h5>
+
+                <p class="about-me">Pygame KEYDOWN is used to allow the user to increase or decrease the snake speed.
+                This is done by increasing/decreasing the number of times the main loop runs per second
+                each time the specified keys are pressed.</p>
+                
+                <img src="snake-speed.png" alt="python code showing code to alow user to change snake speed" class="centered-pic">
+                
+                <h5 class="centered-text">Background and effects </h5>
+                <p class="about-me">I used pygame mixer to add some winning sounds and rock n' roll vibes! </p>
+                <br>
+                <br>
+                <br>
+                <div class="buttons">
+                    <input type="button" value="Exit" class="button" onClick="document.getElementById('python').style.display='none';">
+                </div>
+                <footer class="footer">
+                    <p class="centered-text">2022 Clare Lynch </p>
+                </footer>
+                <br>
+                
+                </div>
+
+    <!--Secure Chat App--> 
+
+    <h3 class="centered-text">Coding a simple chat app using Fernet encryption</h3>
+    <h5 class="centered-text">September 2022</h5>
+    <p class="about-me">One of my final Python projects involved creating a simple chat app, using 
+        Fernet to encrypt messages as they travel accross the network. This involved creating a client
+        and a server, binding the server to a socket to allow it to listen for incoming connections
+        and then creating a simple WHILE loop to allow communication to continue until someone typed 'quit'. 
+    </p>
+    <div class="buttons">
+    <input type="button" value="Click here to read more" class="red-button" onClick="document.getElementById('fernet').style.display='block';">
+    </div>
+            <div id="fernet" class="modal">
+            <h3 class="centered-text">More about Fernet </h3>    
+            <p class="about-me">Fernet is part of Python's cryptography library and provides symmetric encryption,
+                meaning that the same cryptographic key is used for both encryption and decryption.
+                Fernet produces a token based on the plaintext message entered, a timestamp and the key.
+                The ciphertext will always be a multiple of the 128-bit block size. If the message entered is not 128 bits,
+                fernet will use padding to fill up any space that has not been used. 
+            </p>
+            <img src="chatApp.png" class="big-pic" width="500px">
+        <div class="buttons">
+            <input type="button" value="Exit" class="button" onClick="document.getElementById('fernet').style.display='none';">
+        </div>
+    </div>
+
+    <!--Python Beginner-->
+    <h3 class="centered-text">Python - starting out!</h3>
+    <h5 class="centered-text">August 2022</h5>
+    <p class="about-me">I began studying Python in mid July, starting with the absolute
+        basics and progressing to writing small snippets of code to create patterns, determine
+        the age of a user based on input, operate a simple shopping checkout and other similar projects. 
+        My mid term assessment was submitted five weeks into the course and can be viewed on <a href="https://github.com/clynch11/Python-Beginner-Coding/blob/main/Clare%20Lynch_7568473_Assessment%203.ipynb">GitHub.</a> 
+    </p>
+    <div class="buttons">
+        <a target="_blank" href="https://github.com/clynch11/Python-Beginner-Coding/blob/main/Clare%20Lynch_7568473_Assessment%203.ipynb">
+            Click here to check out the full code on GitHub!</a>
+    </div>
+    <br>
+    <br>           
+
+
+
+            <!--Virtual Machines--> 
+            <h3 class="centered-text">Virtualisation</h3>
+            <p class="about-me">To complete the requirements of my course, 
+                I have installed, uninstalled and used an Ubuntu virtual machine on both Windows11 and Mac using 
+                Virtual Box. One machine was used for all mySQL assignments, whilst the other was used as 
+                a vulnerable lab for SQLI practice. 
+             </p> 
+            <br>
+            <br>
+
+            
+            <!--SQL-->
+            <h3 class="centered-text">MySQL</h3>
+            <h5 class="centered-text">April 2022 </h5>
+            <p class="about-me">My first subject at university involved learning about database design and 
+            mySQL. The first project involoved designing a relational database while the second half of the subject
+            focused on mySQL. MySQL Workbench and the command line on my Ubuntu VM were used to create, edit and delete sample databases.
+            I also learned how to set and edit user privileges for sample databases.</p>
+            <div style="text-align:center;">
+            <a href="https://github.com/clynch11/mySQL/blob/main/solution1.rpt" target="_blank">
+                Check out my mySQL work on GitHub!</a></div         
+            </div>
+            <br>
+            <br>
+
+<!--Research Subject-->
+
+        <h3 class="centered-text">Researching Cyber Attacks and Risk Management</h3>
+        <h5 class="centered-text">April 2022 </h5>
+        <p class="about-me">My second subject during semester 1 focused on understanding 
+            common cyber attacks including social engineering, a research project into the Sony Pictures
+            hack in 2014 and understanding risk analysis for cyber security. 
+        </p>
+        <br>
+        <br>
+
+<!--Initial Learning-->
+    <h3 class="centered-text">University Preparation</h3>
+    <h5 class="centered-text">March 2022 </h5>
+    <p class="about-me">Once enrolled in my Graduate Certificate, I prepared by trying to get a 
+    basic understanding of IT. I had no technical computing knowledge other than using software I had 
+    needed for my music programs prior to my career change. Whilst working my last term as a full-time
+    music teacher, I began by taking a beginner's course on TryHackMe in the evenings and trying some 
+    basic code lessons on the app Mimo.</p>
+</p>
+<br>
+<br>
+
+    <!--Video Editing-->
+            <h3 class="centered-text">Video Editing</h3>
+            <p class="about-me">During the pandemic I began making educational videos as part of my music teaching business.
+            I started out making basic videos on iMovie but soon became curious to learn how more engaging animated videos were made. 
+            I used Da Vinci Resolve to make the following lessons and performances.    
+            </p>
+            <video class="video" autoplay controls id="vid" src="BeatLesson.mp4" class="video">
+                
+                Your browser does not support the video tag.
+                </video>
+                <br>
+            <div class="buttons">
+                <button class="button" onClick="GoBack()">Back</button>
+                <button class="button" onClick="changeVideo()">Next</button>
+                <script src="GoForward1.js"></script>
+                <script src="GoBack1.js"></script>
+            </div>
+
             <h3 class="centered-text">Online Violin Courses</h3>
+
             <p class="about-me">As I made more videos, I began organising them into short courses in violin playing. 
                 I hosted these courses using Teachable, desiging both the course content using tools such as Canva
                  and the sales pages. 
-                The site can be viewd <a target="blank" class="link" href="https://steps2music.teachable.com/">here!</a>
+                The site can be viewed <a target="blank" class="link" href="https://steps2music.teachable.com/">here!</a>
                 <br>
-                <a a target="blank" href="https://steps2music.teachable.com/"> <img class="linkPic" src="DogSite.jpg" alt="a picture with balloons saying 'we have a wesbite!"></a>
+                <a class="centered-text" target="blank" href="https://steps2music.teachable.com/"> <img class="linkPic" src="DogSite.jpg" alt="a picture with balloons saying 'we have a wesbite!"></a>
                 <p class="about-me">I also began an instagram page to promote the new part of my business and did extensive research into 
                 social media marketing. 
                 The instagram page can be viewed @steps2music.</p>
 
                 <p class="about-me"> As I was increasingly enjoying the technical side of this project and
                 looking towards a career change, this project became a hobby that I now work on when I have free time.</p>
-        </div>
+                
+                <br>
+                <br>
+
+    <!--Other Software used for Teaching-->
+            <h3 class="centered-text">Software used for my teaching business</h3>
+            <div class="about-me">
+            <p>Whilst running my music teaching business, I regularly used the following
+                software:
+                <u1>
+                    <li>MyMusicStaff - all business admin, scheduling and invoices</li>
+                    <li>Sibelius - music notation </li>
+                    <li>Audacity - recording/effects for electric violin!</li>
+                    <li>MuseScore - creating simple audio demos</li>
+                    <li>Zoom - online lessons </li>
+                    <li>Teachable - online violin courses</li>
+                    <li>Transcribe - transcribing solos</li>
+                    <li>Microsoft Office - business admin/teaching material</li>
+                    <li>iMovie - video editing</li>
+                    <li>Da Vinci Resolve - video editing</li>
+                    <li>Canva - social media and teaching material</li>
+                    <li>Google Drive - calendar, email, shared documents with other teachers</li>
+                    <li>Weebly</li>
+                    
+                </u1>
+                <video class="video" autoplay controls src="Fear of the dark Option 2.MOV"></video>
+            </div>
+            <p class="about-me"> Solo from Fear of the Dark using Behringer UM2 USB audio interface to connect to 
+                Windows11. Effects and backing track added in Audacity.</p>
+           
+            <br>
+            <br>
         <footer class="footer">
             <p class="centered-text">2022 Clare Lynch </p>
         </footer>
