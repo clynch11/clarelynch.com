@@ -34,13 +34,18 @@
         <input type="button" value="Click here to read more!" class="red-button" onClick="document.getElementById('python').style.display='block';">
     </div>
             <div id="python" class="modal">
-            <h3 class="centered-text">Using Object Oriented Programming </h3>    
+            <h5 class="centered-text">Using Object Oriented Programming </h5>    
     
-                <p class="about-me">In OOP, classes of objects are identified, 
-                given properties (attributes) and methods (functions). These are then called 
-                during the main game loop. My classes included Snake, Food, Sounds and Messages.</p>
-
-                 
+                <p class="about-me"> Object Oriented Programming (OOP) essentially creates a template (called a class)
+                    to describe real world objects. In a simple example, a class "employee" may be created to hold
+                    information about all employees at a particular company. All employees have some things in common 
+                    (for example, the company they work for). These are called <b>class attributes</b> and apply to every 
+                    record (called an instance) that we create later on. Each employee will also have attributes specific to themselves, such as their name
+                    and employee number. These are called instance attributes. We may then wish to define functions (called methods)
+                    to call later in our program. Check out my early study notes working through a simple OOP example 
+                    <a target="_blank" href="https://github.com/clynch11/Python-Beginner-Coding/blob/main/SimpleOOP.ipynb">here!</a>
+                    In this example, calling the 'role' method will print '[employee] works in [area]' to the screen. 
+                    In the snake game, I used classes Snake, Food, Sounds and Messages. 
                 <h5 class="centered-text">The 'secret' to the continuously moving snake!</h5>
                  
                 <p class="about-me">The x and y variables are first used to draw the 'snake' to the screen. 
@@ -77,13 +82,12 @@
                 <br>
                 <br>
                 <div class="buttons">
-                    <input type="button" value="Exit" class="button" onClick="document.getElementById('python').style.display='none';">
+                    <input type="button" value="Exit" class="red-button" onClick="document.getElementById('python').style.display='none';">
                 </div>
                 <footer class="footer">
                     <p class="centered-text">2022 Clare Lynch </p>
                 </footer>
                 <br>
-                
                 </div>
 
     <!--Secure Chat App--> 
@@ -101,14 +105,18 @@
             <div id="fernet" class="modal">
             <h3 class="centered-text">More about Fernet </h3>    
             <p class="about-me">Fernet is part of Python's cryptography library and provides symmetric encryption,
-                meaning that the same cryptographic key is used for both encryption and decryption.
-                Fernet produces a token based on the plaintext message entered, a timestamp and the key.
+                meaning that the same cryptographic key is held at each end of the connection and used
+                for both encryption and decryption. This key is supplied by the user and must be 256 bits in length.
+                Fernet uses Advanced Encryption Standard (AES), which is an encryption algorithm developed 
+                by the National Institute of Standards and Technology and used commonly, including for HTTPS.
+                Fernet produces a token based on the plaintext message entered, a timestamp and the key. This token
+                includes the encrypted version of the message as well as information to verify it's integrity. 
                 The ciphertext will always be a multiple of the 128-bit block size. If the message entered is not 128 bits,
                 fernet will use padding to fill up any space that has not been used. 
             </p>
             <img src="chatApp.png" class="big-pic" width="500px">
         <div class="buttons">
-            <input type="button" value="Exit" class="button" onClick="document.getElementById('fernet').style.display='none';">
+            <input type="button" value="Exit" class="red-button" onClick="document.getElementById('fernet').style.display='none';">
         </div>
     </div>
 
@@ -132,7 +140,7 @@
     <p class="about-me">I began learning HTML, CSS and JavaScript at the beginning of term 2. 
         My first projects involved coding simple pages including tables, different border styles, 
         lists and images such as the one pictured below. I enjoyed HTML, CSS and JavaScript and used these after 
-        finishing university to code this website! 
+        finishing university to create, style and add the hideaway and slider features on this website! 
     </p>
     <img src="SampleHTML.png" alt="a table created using HTML and CSS" style="width:30%" class="centered-pic">
 
@@ -153,12 +161,38 @@
             <h5 class="centered-text">April 2022 </h5>
             <p class="about-me">My first subject at university involved learning about database design and 
             mySQL. The first project involoved designing a relational database while the second half of the subject
-            focused on mySQL. MySQL Workbench and the command line on my Ubuntu VM were used to create, edit and delete sample databases.
-            I also learned how to set and edit user privileges for sample databases.</p>
-            <div style="text-align:center;">
-            <a href="https://github.com/clynch11/mySQL/blob/main/solution1.rpt" target="_blank">
-                Check out my mySQL work on GitHub!</a></div         
-            </div>
+            focused on mySQL. MySQL Workbench and the command line on my Ubuntu virtual machine were used to create, edit and delete sample databases.
+            I also learned how to set and edit user privileges for sample databases. Click the button to read
+            about SQL in more detail, or check out my work on GitHub!</p>
+
+            <div class="buttons">
+                <input type="button" value="Click here to read more" class="red-button" onClick="document.getElementById('sql').style.display='block';">
+                </div>
+                        <div id="sql" class="modal">
+                        <h3 class="centered-text">Relational Databases</h3>    
+                        <p class="about-me"></p>
+                        <h3 class="centered-text">MySQL Assignment</h3>
+                        <p class="about-me">This assignment worked with a database containing information about bus drivers
+                        and their schedules. Some drivers had been allocated shifts that overlapped with each other and our task was
+                        to find these and print a specific message stating the overlap times and other relevant information such 
+                        as the license number (LNUM) and the schedule number(SNUM). I used a self join to retreive this information, naming the two 
+                        identical tables S1 and S2. I joined these tables on the license number matching allowing me to find where specific routes overlapped.
+                        The line S1.SNUM < SNUM meant that SQL returned each overlap only once, rather than once for each table which was an initial problem
+                        I had. Concatenation was used to combine the required table information with the desired message and this information was stored in 
+                        a new table, named 'Message'. The following diagram was used to visualise possible overlaps. </p>
+                        <br>
+                    <img src="sqlcomp.jpg" alt="image showing possible overlaps" style="width:40%;" class="centered-pic">
+                    <div style="text-align:center;">
+                        <br>
+                        <br>
+                        <a href="https://github.com/clynch11/mySQL/blob/main/solution1.rpt" target="_blank">
+                            Check out the code for this project here!</a>         
+                        </div>
+                    <div class="buttons">
+                        <input type="button" value="Exit" class="red-button" onClick="document.getElementById('fernet').style.display='none';">
+                    </div>
+                </div>
+                    
             <br>
             <br>
 
