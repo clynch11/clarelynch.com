@@ -141,6 +141,7 @@
         My first projects involved coding simple pages including tables, different border styles, 
         lists and images such as the one pictured below. I enjoyed HTML, CSS and JavaScript and used these after 
         finishing university to create, style and add the hideaway and slider features on this website! 
+        I got way too excited when I discovered the hover function for styling the buttons! 
     </p>
     <img src="SampleHTML.png" alt="a table created using HTML and CSS" style="width:30%" class="centered-pic">
 
@@ -176,9 +177,10 @@
                         and their schedules. Some drivers had been allocated shifts that overlapped with each other and our task was
                         to find these and print a specific message stating the overlap times and other relevant information such 
                         as the license number (LNUM) and the schedule number(SNUM). I used a self join to retreive this information, naming the two 
-                        identical tables S1 and S2. I joined these tables on the license number matching allowing me to find where specific routes overlapped.
-                        The line S1.SNUM < SNUM meant that SQL returned each overlap only once, rather than once for each table which was an initial problem
-                        I had. Concatenation was used to combine the required table information with the desired message and this information was stored in 
+                        identical tables S1 and S2. I created the join on matching license number (LNUM), allowing me to find where specific routes overlapped
+                        for each individual driver.
+                        The line S1.SNUM < S2.SNUM meant that SQL returned each overlap only once, rather than once for each table 
+                        (both S1 and S2) which was an initial problem I had. Concatenation was used to combine the required table information with the desired message and this information was stored in 
                         a new table, named 'Message'. The following diagram was used to visualise possible overlaps. </p>
                         <br>
                     <img src="sqlcomp.jpg" alt="image showing possible overlaps" style="width:40%;" class="centered-pic">
@@ -261,19 +263,22 @@
             <p>Whilst running my music teaching business, I regularly used the following
                 software:
                 <u1>
+
+                    <li>Audacity - recording/effects for electric violin!</li>
+                    <li>Canva - social media and teaching material</li>
+                    <li>Da Vinci Resolve - video editing</li>
+                    <li>Google Drive - calendar, email, shared documents with other teachers</li>
+                    <li>iMovie - video editing</li>
+                    <li>Lightroom - photo editing</li>
+                    <li>Microsoft Office - business admin/teaching material</li>
+                    <li>MuseScore - creating simple audio demos</li>
                     <li>MyMusicStaff - all business admin, scheduling and invoices</li>
                     <li>Sibelius - music notation </li>
-                    <li>Audacity - recording/effects for electric violin!</li>
-                    <li>MuseScore - creating simple audio demos</li>
-                    <li>Zoom - online lessons </li>
+                    <li>Social media including Facebook, Instagram and TikTok business accounts for promoting Steps2Music</li>
                     <li>Teachable - online violin courses</li>
-                    <li>Transcribe - transcribing solos</li>
-                    <li>Microsoft Office - business admin/teaching material</li>
-                    <li>iMovie - video editing</li>
-                    <li>Da Vinci Resolve - video editing</li>
-                    <li>Canva - social media and teaching material</li>
-                    <li>Google Drive - calendar, email, shared documents with other teachers</li>
-                    <li>Weebly</li>
+                    <li>Transcribe - transcribing violin solos</li>
+                    <li>Weebly - first business website</li>
+                    <li>Zoom - online lessons </li>
                     
                 </u1>
                 <video class="video" controls src="Fear of the dark Option 2.MOV"></video>
