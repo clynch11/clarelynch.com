@@ -127,7 +127,7 @@
         display: inline-block;
         margin: 30px auto;
         /*gives margin above and below buttons*/
-        width: 10%;
+        width: 10vw;
         background:rgb(219, 234, 247);
         transition: 0.4s;
         cursor:grab;
