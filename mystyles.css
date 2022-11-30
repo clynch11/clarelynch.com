@@ -125,7 +125,7 @@
     .button {
         position:relative;
         display: inline-block;
-        margin: 30px auto;
+        margin: auto auto;
         /*gives margin above and below buttons*/
         width: 10vw;
         background:rgb(219, 234, 247);
